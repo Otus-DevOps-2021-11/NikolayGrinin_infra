@@ -5,7 +5,7 @@ users:
     shell: /bin/bash
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     ssh-authorized-keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCvXSVuGK2sZvQ9BgBvADHILFpZov7/8VDtIqyGtI4x9e4OprK5hpHaJOKovy22wYmgRxd6i2suCk3mTUqmJyWh7rgP91fwmL3Q15qoOFEsvrsbuLO3D2bwj/eTVbP6Y1ADwjJoTs7KvUZGKH3ZRaNxlyLHkDdNHgYs9tijOucbdZn4FBcP3kou9j/Tuh1ejYcgJgRtaLpjHIp3aAIHI2JoBNMTbJ09weoZsIGb1AP6KMWyznXqu+XwYc7DdqfH1vBNKpDiNHzbzEHBEJ6TUMFC/HAiuHwxBgHyj0ML5HHwmrW7YRHrJVCRd/5POvKTxfWGfEd3HzmQH22T4fspb4U7Qd2X1zamXqKFOABql0Oi9N/yDdJcYieyJaUrpkbFtQLqjwz9gM8lUuha41k00BQk6TGMpIhKmigB/1fOumuRxwBxo6Cpfmwav5tENJxCPBFzqf+eTulMMjyINy4B2BScjz87wwaQryaySBYdqjKVEn/6mwI8qjyiGhyS6QqY89M= appuser
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8Sgj/YTZ4x/ZmDrXZDD1YOjb3Mx/LcvmAoR2En+rtI+ZOgxnMligPtgOSzOWoFzlfA4LwYuPgGBV4zpCvUBkaEU+PTLTA6xgkDO/3rEjfCKynfPyFqh/a1bHAC1IIC9bbjbVWWdzQ734nmDaaAhamvKWj9p/p5Prtd+nVK+OWslHQfmPpEhh2M9+gUwg+2eeMLOc5O8N9lIMq2Kc7gQn3VqtdXXDRAmxVBY1ok69kNRCT/kAQ1dapPm16NTAlOppbB+ZZpx+l27OfQOSP2rcQrlhVuiUhEbopUMdKtO6Sohkadqd5ZKyost1ob8KPkF2m0iCLHiIYYQAs0qMGDuaR+VZvvYmJ6RxTJY5jr99H1OIg6CUE6wt4MRdnhNm1rDleL6V9bKlgeu4xSdk5R1TPAHjjTCJpD+Jnx7E96hKxqNAxoJJjn80XQUtuXxGInM99F3+5HB/Hn6Iak3D/7ewsQxAuHnSNZtazCl7jIDrnObWnQSiPLBgt6+SC13wfepc= appuser
 runcmd:
   - wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
   - echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
