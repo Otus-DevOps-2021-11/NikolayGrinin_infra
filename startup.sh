@@ -7,5 +7,7 @@ yc compute instance create \
   --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
   --zone=ru-central1-a \
   --metadata serial-port-enable=1 \
-  --metadata-from-file user-data=cloud_config.yaml
+  --metadata-from-file user-data=startup_config.yaml
+
+
   
