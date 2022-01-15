@@ -11,6 +11,7 @@ runcmd:
   - echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
   - apt update -y
   - apt install -y apt-transport-https ca-certificates ruby-full ruby-bundler build-essential mongodb-org git
+  - apt install -y mongodb-org
   - systemctl start mongod
   - systemctl enable mongod
   - sudo apt-get install git
