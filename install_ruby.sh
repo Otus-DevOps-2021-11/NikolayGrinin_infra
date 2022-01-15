@@ -1,3 +1,3 @@
 #!/bin/bash
-apt update -y
-apt install -y apt-transport-https ca-certificates ruby-full ruby-bundler build-essential git
+sudo apt update
+sudo apt install -y ruby-full ruby-bundler build-essential
