@@ -13,6 +13,7 @@ runcmd:
   - apt install -y apt-transport-https ca-certificates ruby-full ruby-bundler build-essential mongodb-org git
   - systemctl start mongod
   - systemctl enable mongod
+  - sudo apt-get install git
   - cd /home/yc-user && git clone -b monolith https://github.com/express42/reddit.git
   - cd /home/yc-user/reddit && bundle install
   - puma -d
