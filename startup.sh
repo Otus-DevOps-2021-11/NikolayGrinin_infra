@@ -8,6 +8,3 @@ yc compute instance create \
   --zone=ru-central1-a \
   --metadata serial-port-enable=1 \
   --metadata-from-file user-data=startup_config.yaml
-
-
-  
