@@ -4,6 +4,7 @@ terraform {
       source  = "yandex-cloud/yandex"
       version = "0.69.0"
     }
+
   }
 }
 
