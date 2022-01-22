@@ -30,7 +30,7 @@ variable "service_account_key_file" {
 
 variable "instance_count" {
   description = "VM count"
-  default     = 2
+  default     = 1
 }
 
 variable "region_id" {
