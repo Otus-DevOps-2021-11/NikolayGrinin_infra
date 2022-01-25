@@ -1,10 +1,3 @@
-terraform {
-  required_providers {
-    yandex = {
-          version = ">= 0.35"
-    }
-  }
-}
 
 provider "yandex" {
   service_account_key_file = var.service_account_key_file
