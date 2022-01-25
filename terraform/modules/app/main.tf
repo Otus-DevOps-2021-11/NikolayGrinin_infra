@@ -1,11 +1,11 @@
- terraform {
-   required_providers {
-      yandex = {
-          source = "yandex-cloud/yandex"
-          version = "0.69.0"
-      }
-   }
- }
+terraform {
+  required_providers {
+    yandex = {
+      source  = "yandex-cloud/yandex"
+      version = ">=0.69.0"
+    }
+  }
+}
 
 resource "yandex_compute_instance" "app" {
   name = "reddit-app"
@@ -14,9 +14,9 @@ resource "yandex_compute_instance" "app" {
     tags = "reddit-app"
   }
   resources {
-    cores  = 2
+    cores         = 2
     core_fraction = 20
-    memory = 2
+    memory        = 2
   }
 
   boot_disk {
@@ -27,20 +27,20 @@ resource "yandex_compute_instance" "app" {
 
   network_interface {
     subnet_id = var.subnet_id
-    nat = true
+    nat       = true
   }
 
   metadata = {
-  ssh-keys = "ubuntu:${file(var.public_key_path)}"
+    ssh-keys = "ubuntu:${file(var.public_key_path)}"
   }
 
-    provisioner "file" {
+  provisioner "file" {
     source      = "${path.module}/files/puma.service"
     destination = "/tmp/puma.service"
   }
 
   provisioner "remote-exec" {
-      inline = [
+    inline = [
       "echo 'DATABASE_URL=${var.database_url}' > ~/puma.env"
     ]
   }

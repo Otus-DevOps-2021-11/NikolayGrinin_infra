@@ -1,11 +1,11 @@
- terraform {
-   required_providers {
-      yandex = {
-          source = "yandex-cloud/yandex"
-          version = "0.69.0"
-      }
-   }
- }
+terraform {
+  required_providers {
+    yandex = {
+      source  = "yandex-cloud/yandex"
+      version = ">=0.69.0"
+    }
+  }
+}
 resource "yandex_compute_instance" "db" {
   name = "reddit-db"
   labels = {
@@ -13,9 +13,9 @@ resource "yandex_compute_instance" "db" {
   }
 
   resources {
-    cores  = 2
-     core_fraction = 20
-    memory = 2
+    cores         = 2
+    core_fraction = 20
+    memory        = 2
   }
 
   boot_disk {
@@ -26,13 +26,13 @@ resource "yandex_compute_instance" "db" {
 
   network_interface {
     subnet_id = var.subnet_id
-    nat = true
+    nat       = true
   }
 
   metadata = {
-  ssh-keys = "ubuntu:${file(var.public_key_path)}"
+    ssh-keys = "ubuntu:${file(var.public_key_path)}"
   }
-    connection {
+  connection {
     type        = "ssh"
     host        = self.network_interface.0.nat_ip_address
     user        = "ubuntu"
