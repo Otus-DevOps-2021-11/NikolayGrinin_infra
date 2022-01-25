@@ -10,8 +10,6 @@
             "ssh_username": "ubuntu",
             "platform_id": "{{user `platform_id`}}",
 	    "use_ipv4_nat": "true",
-	    "instance_cores": "{{user `instance_cores`}}",
-	    "instance_mem_gb": "{{user `instance_mem_gb`}}",
 	    "instance_name": "{{user `instance_name`}}"
         }
     ],
