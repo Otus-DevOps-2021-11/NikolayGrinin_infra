@@ -42,3 +42,7 @@ variable "region_id" {
   description = "Region"
   default     = "ru-central1"
 }
+
+variable "environment" {
+  description = "Env type"
+}

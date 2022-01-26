@@ -5,4 +5,4 @@
     "platform_id": "standard-v1",
     "ssh_username": "ubuntu",
     "image_family": "reddit-app"
-  }
+}
