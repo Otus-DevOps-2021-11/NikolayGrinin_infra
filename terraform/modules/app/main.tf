@@ -1,4 +1,15 @@
 
+
+terraform {
+  required_version = ">= 0.12"
+  required_providers {
+    yandex = {
+      source = "yandex-cloud/yandex"
+           version = ">= 0.35"
+    }
+ }
+}
+
 resource "yandex_compute_instance" "app" {
   name = "reddit-app"
 
@@ -24,6 +35,14 @@ resource "yandex_compute_instance" "app" {
 
   metadata = {
     ssh-keys = "ubuntu:${file(var.public_key_path)}"
+      }
+
+  connection {
+    type        = "ssh"
+    host        = self.network_interface.0.nat_ip_address
+    user        = "ubuntu"
+    agent       = false
+    private_key = file(var.private_key_path)
   }
 
   provisioner "file" {
