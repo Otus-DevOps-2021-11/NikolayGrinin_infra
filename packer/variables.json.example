@@ -1,7 +1,11 @@
+
 {
-	"folder_id": "exampleid1234567",
-	"service_account_key_file": "packer/key.json.example",
-	"source_image_family": "ubuntu-1604-lts",
-	"ssh_username": "ubuntu",
-	"token": ""
+      "type": "yandex",
+      "service_account_key_file": "key.json.example",
+      "folder_id":  "b1gjkjunb821h86i994t",
+      "source_image_family": "ubuntu-1604-lts",
+      "image_family": "reddit-base",
+      "ssh_username": "ubuntu",
+      "platform_id": "standard-v1",
+      "use_ipv4_nat": true
 }
