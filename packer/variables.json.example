@@ -1,8 +1,9 @@
+
 {
-    "yc_service_access_key": "key.json.example",
-    "folder_id": "opwefjjgjgg",
-    "source_image_family": "ubuntu-1604-lts",
-    "platform_id": "standard-v1",
-    "ssh_username": "ubuntu",
-    "image_family": "reddit-app"
+      "service_account_key_file": "packer/key.json.example",
+      "folder_id":  "b1gjkjunb821h86i994t",
+      "source_image_family": "ubuntu-1604-lts",
+      "image_family": "reddit-base",
+      "ssh_username": "ubuntu"
+
 }
