@@ -4,10 +4,10 @@ cat <<EOANSIBLESCRIPT
     "_meta": {
         "hostvars": {
             "appserver": {
-                "ansible_host": "84.201.135.24"
+                "ansible_host": "62.84.118.111"
             },
             "dbserver": {
-                "ansible_host": "84.201.133.130"
+                "ansible_host": "62.84.113.93"
             }
         }
     },
