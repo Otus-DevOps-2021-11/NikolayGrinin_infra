@@ -6,3 +6,5 @@ variables.json
 .terraform/
 .terraform.lock.hcl
 *.retry
+jdauphant.nginx
+ansible/vault.key
